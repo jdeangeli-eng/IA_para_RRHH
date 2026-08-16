@@ -49,6 +49,9 @@
         .glow-effect {
             box-shadow: 0 0 40px -5px rgba(129, 140, 248, 0.25);
         }
+        .glow-emerald {
+            box-shadow: 0 0 35px -5px rgba(16, 185, 129, 0.3);
+        }
         .ai-border {
             border-image: linear-gradient(to right, #06b6d4, #a855f7, #10b981) 1;
         }
@@ -97,19 +100,18 @@
                 <div class="hidden lg:flex items-center space-x-7 text-sm font-medium text-slate-300">
                     <a href="#beneficios" class="hover:text-cyan-400 transition">Beneficios</a>
                     <a href="#modulos" class="hover:text-cyan-400 transition">Módulos</a>
+                    <a href="#inscripcion" class="hover:text-emerald-400 transition font-semibold text-emerald-400">Inscripción y Aranceles</a>
                     <a href="#herramientas" class="hover:text-cyan-400 transition">Stack Tech</a>
                     <a href="#docentes" class="hover:text-cyan-400 transition">Entrenadores</a>
-                    <a href="#destinatarios" class="hover:text-cyan-400 transition">Destinatarios</a>
                     <a href="#asesor" class="hover:text-cyan-400 transition">Contacto Directo</a>
                 </div>
 
                 <!-- Action Button -->
                 <div class="flex items-center space-x-3">
-                    <a href="https://wa.me/5493516573170?text=Hola%20Jorge,%20quiero%20solicitar%20el%20folleto%20y%20aranceles%20de%20la%20Certificación%20en%20IA%20para%20RRHH." 
-                       target="_blank"
-                       class="hidden sm:inline-flex items-center justify-center px-4 py-2.5 rounded-xl text-xs font-bold text-slate-950 bg-gradient-to-r from-cyan-400 to-emerald-400 hover:from-cyan-300 hover:to-emerald-300 transition shadow-lg shadow-cyan-500/10">
-                        <i data-lucide="message-square" class="w-4 h-4 mr-1.5"></i>
-                        Consultar Aranceles
+                    <a href="#inscripcion" 
+                       class="hidden sm:inline-flex items-center justify-center px-4 py-2.5 rounded-xl text-xs font-bold text-slate-950 bg-gradient-to-r from-emerald-400 to-cyan-400 hover:from-emerald-300 hover:to-cyan-300 transition shadow-lg shadow-emerald-500/10">
+                        <i data-lucide="user-check" class="w-4 h-4 mr-1.5"></i>
+                        Inscribirme Ahora
                     </a>
                     <button onclick="scrollToAdvisor()" class="lg:hidden p-2 text-slate-300 hover:text-white">
                         <i data-lucide="menu" class="w-6 h-6"></i>
@@ -172,17 +174,18 @@
 
                     <!-- Primary CTAs -->
                     <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
-                        <a href="https://wa.me/5493516573170?text=Hola%20Jorge,%20quiero%20solicitar%20información%20y%20bonificaciones%20de%20la%20Certificación%20en%20IA%20para%20RRHH." 
-                           target="_blank"
-                           class="inline-flex items-center justify-center px-6 py-4 rounded-xl text-sm font-bold text-slate-950 bg-gradient-to-r from-cyan-400 via-emerald-400 to-lime-400 hover:opacity-95 transition shadow-xl shadow-cyan-500/20 group">
-                            <i data-lucide="message-circle" class="w-5 h-5 mr-2 fill-slate-950"></i>
-                            Hablar con Jorge De Angeli (WhatsApp)
+                        <a href="#inscripcion" 
+                           class="inline-flex items-center justify-center px-6 py-4 rounded-xl text-sm font-bold text-slate-950 bg-gradient-to-r from-emerald-400 via-cyan-400 to-lime-400 hover:opacity-95 transition shadow-xl shadow-emerald-500/20 group">
+                            <i data-lucide="clipboard-check" class="w-5 h-5 mr-2 fill-slate-950"></i>
+                            Ir al Formulario de Inscripción
                             <i data-lucide="arrow-right" class="w-5 h-5 ml-2 group-hover:translate-x-1 transition"></i>
                         </a>
 
-                        <a href="#modulos" 
+                        <a href="https://wa.me/5493516573170?text=Hola%20Jorge,%20quiero%20solicitar%20información%20y%20bonificaciones%20de%20la%20Certificación%20en%20IA%20para%20RRHH." 
+                           target="_blank"
                            class="inline-flex items-center justify-center px-6 py-4 rounded-xl text-sm font-semibold text-slate-300 bg-slate-900 hover:bg-slate-800 border border-slate-700 transition">
-                            Ver Programa Completo
+                            <i data-lucide="message-circle" class="w-5 h-5 mr-2 text-emerald-400"></i>
+                            Consultar a Jorge De Angeli
                         </a>
                     </div>
 
@@ -195,7 +198,7 @@
                     </div>
                 </div>
 
-                <!-- Right Lead Form Card -->
+                <!-- Right Quick Consultation Card -->
                 <div class="lg:col-span-5">
                     <div class="bg-slate-900/95 border border-indigo-500/30 p-6 sm:p-8 rounded-2xl shadow-2xl relative glow-effect">
                         <div class="absolute -top-3 right-6 bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-[10px] uppercase font-extrabold px-3 py-1 rounded-full tracking-wider shadow">
@@ -204,7 +207,7 @@
 
                         <div class="text-center mb-6">
                             <h3 class="text-xl font-bold text-white">Solicita Información y Programa</h3>
-                            <p class="text-slate-400 text-xs mt-1">Recibe el temario detallado, opciones de pago y becas directamente con Jorge De Angeli.</p>
+                            <p class="text-slate-400 text-xs mt-1">Recibe el temario detallado y opciones de pago directamente con Jorge De Angeli.</p>
                         </div>
 
                         <form id="leadForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
@@ -512,6 +515,220 @@
         </div>
     </section>
 
+    <!-- DEDICATED REGISTRATION & PAYMENT OPTIONS SECTION -->
+    <section id="inscripcion" class="py-20 bg-gradient-to-b from-gray-950 via-slate-900 to-gray-950 border-t border-slate-800 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center space-x-2 bg-emerald-950/80 border border-emerald-500/30 rounded-full px-4 py-1.5 text-xs text-emerald-300 mb-3">
+                    <i data-lucide="sparkles" class="w-3.5 h-3.5 text-emerald-400"></i>
+                    <span>Inscripciones Abiertas • Inicio: 18 de Agosto 2026</span>
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-white font-display tracking-tight">
+                    Formulario de Inscripción Oficial
+                </h2>
+                <p class="text-slate-300 mt-4 text-sm sm:text-base">
+                    Completa tus datos personales y selecciona la opción de pago conveniente para formalizar tu registro a la Certificación Universitaria.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                
+                <!-- Left Column: Summary of Payment Plans & Card Alternatives -->
+                <div class="lg:col-span-5 space-y-6">
+                    
+                    <div class="bg-slate-900/90 border border-emerald-500/40 p-6 sm:p-8 rounded-3xl space-y-6 shadow-xl relative overflow-hidden">
+                        <div class="absolute top-0 right-0 bg-emerald-500 text-slate-950 text-[10px] font-black uppercase px-4 py-1 rounded-bl-xl tracking-wider">
+                            Beneficio Exclusivo
+                        </div>
+
+                        <h3 class="text-xl font-bold text-white flex items-center">
+                            <i data-lucide="gift" class="w-5 h-5 text-emerald-400 mr-2"></i>
+                            Opciones de Inversión
+                        </h3>
+
+                        <!-- Option 1 Highlight Card -->
+                        <div class="bg-slate-950 p-5 rounded-2xl border border-emerald-500/30 hover:border-emerald-400 transition relative">
+                            <div class="flex justify-between items-start mb-2">
+                                <span class="bg-emerald-500/20 text-emerald-300 font-bold text-[10px] uppercase px-2.5 py-1 rounded-full border border-emerald-500/30">
+                                    Opción 1 • Pago Único
+                                </span>
+                                <span class="text-xs font-bold text-amber-400 bg-amber-950/50 px-2 py-0.5 rounded border border-amber-500/30">30% OFF</span>
+                            </div>
+                            <div class="text-2xl font-black text-white mt-1">$ 601.196.-</div>
+                            <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+                                Pago único por transferencia bancaria. Incluye <strong class="text-emerald-300">BECA 30% OFF</strong> + <strong class="text-emerald-300">Matrícula de inscripción 100% bonificada</strong>.
+                            </p>
+                        </div>
+
+                        <!-- Option 2 Highlight Card -->
+                        <div class="bg-slate-950 p-5 rounded-2xl border border-indigo-500/30 hover:border-indigo-400 transition">
+                            <div class="flex justify-between items-start mb-2">
+                                <span class="bg-indigo-500/20 text-indigo-300 font-bold text-[10px] uppercase px-2.5 py-1 rounded-full border border-indigo-500/30">
+                                    Opción 2 • Financiado
+                                </span>
+                                <span class="text-xs font-semibold text-indigo-300">Tarjeta de Crédito</span>
+                            </div>
+                            <div class="text-2xl font-black text-white mt-1">12 cuotas sin interés de $ 81.658.-</div>
+                            <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+                                Plan financiado de 12 cuotas fijas e iguales con tarjeta de crédito corporativa o personal.
+                            </p>
+                        </div>
+
+                        <!-- Custom Card Payment Query CTA Box -->
+                        <div class="bg-gradient-to-r from-indigo-950/80 to-purple-950/80 border border-indigo-500/40 p-5 rounded-2xl space-y-3">
+                            <div class="flex items-start space-x-3">
+                                <div class="p-2 bg-indigo-500/20 text-indigo-300 rounded-lg flex-shrink-0">
+                                    <i data-lucide="credit-card" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-bold text-white">¿Buscas otras opciones de pago?</h4>
+                                    <p class="text-xs text-slate-300 mt-0.5 leading-normal">
+                                        Si deseas consultar planes de pago personalizados o financiar con otras tarjetas de crédito, contáctate directamente por WhatsApp.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <a href="https://wa.me/5493516573170?text=Hola%20Jorge,%20quisiera%20consultar%20por%20otras%20opciones%20de%20pago%20con%20tarjeta%20de%20crédito%20para%20la%20Certificación%20en%20IA%20para%20RRHH." 
+                               target="_blank" 
+                               class="w-full py-2.5 px-4 bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs rounded-xl transition flex items-center justify-center space-x-2 border border-indigo-400/30 shadow-md">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                                <span>Consultar otras opciones de pago con Tarjeta</span>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- Guarantee Note -->
+                    <div class="p-4 bg-slate-900/60 rounded-2xl border border-slate-800 flex items-center space-x-3 text-xs text-slate-400">
+                        <i data-lucide="shield-check" class="w-6 h-6 text-emerald-400 flex-shrink-0"></i>
+                        <span>Proceso de inscripción respaldado y formalizado de forma transparente directamente con el equipo de admisiones de Mundos E y la UNC.</span>
+                    </div>
+
+                </div>
+
+                <!-- Right Column: Registration Form -->
+                <div class="lg:col-span-7">
+                    <div class="bg-slate-900/95 border-2 border-emerald-500/40 p-6 sm:p-10 rounded-3xl shadow-2xl relative glow-emerald">
+                        
+                        <div class="flex items-center space-x-3 pb-6 border-b border-slate-800 mb-6">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">
+                                <i data-lucide="user-plus" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Registro de Postulante</h3>
+                                <p class="text-xs text-slate-400">Ingresa tus datos completos para formalizar tu solicitud de inscripción.</p>
+                            </div>
+                        </div>
+
+                        <!-- Formal Inscription Form -->
+                        <form id="registrationForm" onsubmit="handleRegistrationSubmit(event)" class="space-y-5">
+                            
+                            <!-- Nombre y Apellido -->
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-200 mb-1.5">
+                                    Nombre y Apellido <span class="text-emerald-400">*</span>
+                                </label>
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-500">
+                                        <i data-lucide="user" class="w-4 h-4"></i>
+                                    </div>
+                                    <input type="text" id="regName" required placeholder="Ej: Valentina Morales" 
+                                           class="w-full bg-slate-950 border border-slate-700 focus:border-emerald-400 rounded-xl pl-10 pr-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none transition">
+                                </div>
+                            </div>
+
+                            <!-- Nro. de Documento (DNI/Pasaporte) -->
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-200 mb-1.5">
+                                    Nro. de Documento (DNI / Cédula / Pasaporte) <span class="text-emerald-400">*</span>
+                                </label>
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-500">
+                                        <i data-lucide="id-card" class="w-4 h-4"></i>
+                                    </div>
+                                    <input type="text" id="regDocument" required placeholder="Ej: 35.890.123" 
+                                           class="w-full bg-slate-950 border border-slate-700 focus:border-emerald-400 rounded-xl pl-10 pr-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none transition">
+                                </div>
+                            </div>
+
+                            <!-- Grid Teléfono & Email -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <!-- Teléfono -->
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-200 mb-1.5">
+                                        Teléfono / WhatsApp <span class="text-emerald-400">*</span>
+                                    </label>
+                                    <div class="relative">
+                                        <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-500">
+                                            <i data-lucide="phone" class="w-4 h-4"></i>
+                                        </div>
+                                        <input type="tel" id="regPhone" required placeholder="+54 9 11 ..." 
+                                               class="w-full bg-slate-950 border border-slate-700 focus:border-emerald-400 rounded-xl pl-10 pr-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none transition">
+                                    </div>
+                                </div>
+
+                                <!-- Correo Electrónico -->
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-200 mb-1.5">
+                                        Correo Electrónico <span class="text-emerald-400">*</span>
+                                    </label>
+                                    <div class="relative">
+                                        <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-500">
+                                            <i data-lucide="mail" class="w-4 h-4"></i>
+                                        </div>
+                                        <input type="email" id="regEmail" required placeholder="ejemplo@email.com" 
+                                               class="w-full bg-slate-950 border border-slate-700 focus:border-emerald-400 rounded-xl pl-10 pr-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none transition">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Opción de Pago Elegida Dropdown -->
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-200 mb-1.5">
+                                    Opción de Pago elegida <span class="text-emerald-400">*</span>
+                                </label>
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-500">
+                                        <i data-lucide="wallet" class="w-4 h-4"></i>
+                                    </div>
+                                    <select id="regPaymentOption" required 
+                                            class="w-full bg-slate-950 border border-slate-700 focus:border-emerald-400 rounded-xl pl-10 pr-10 py-3 text-xs sm:text-sm text-slate-200 focus:outline-none transition appearance-none cursor-pointer">
+                                        <option value="1) Pago único por transferencia de $ 601.196.- (Incluye BECA 30%OFF + matrícula de inscripción 100% bonificada).">
+                                            1) Pago único por transferencia de $ 601.196.- (BECA 30%OFF + Matrícula bonificada)
+                                        </option>
+                                        <option value="2) 12 cuotas sin interés de $ 81.658.- con tarjeta de crédito.">
+                                            2) 12 cuotas sin interés de $ 81.658.- con tarjeta de crédito
+                                        </option>
+                                    </select>
+                                    <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-slate-400">
+                                        <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" 
+                                    class="w-full py-4 px-6 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 hover:opacity-95 text-slate-950 font-black text-sm rounded-xl transition shadow-xl shadow-emerald-500/20 flex items-center justify-center space-x-2 group">
+                                <i data-lucide="send" class="w-5 h-5 fill-slate-950"></i>
+                                <span>Completar Inscripción por WhatsApp</span>
+                                <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition"></i>
+                            </button>
+
+                            <div class="p-3 bg-slate-950 rounded-xl border border-slate-800/80 text-[11px] text-slate-400 text-center">
+                                Al hacer clic, se abrirá WhatsApp con el mensaje estructurado de tu inscripción dirigido a <strong>Jorge De Angeli</strong> para confirmación inmediata de vacante.
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
     <!-- DESTINATARIOS SECTION -->
     <section id="destinatarios" class="py-20 bg-slate-900/40 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -711,7 +928,7 @@
                         </div>
 
                         <p class="text-xs sm:text-sm text-slate-300 leading-relaxed bg-slate-950/60 p-4 rounded-xl border border-slate-800">
-                            "Con gusto responderé todas tus inquietudes sobre el programa en IA para RR. HH., convenios corporativos para empresas, promociones de inscripción y facilidades de pago."
+                            "Con gusto responderé todas tus inquietudes sobre la inscripción, la Certificación en IA para RR. HH., convenios corporativos para empresas, promociones de becas y facilidades de pago."
                         </p>
 
                         <!-- Contact Badges / Action Buttons -->
@@ -759,6 +976,11 @@
             </div>
 
             <div class="space-y-4">
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-5">
+                    <h4 class="font-bold text-white text-sm mb-2">¿Cómo confirmo mi inscripción una vez enviado el formulario?</h4>
+                    <p class="text-xs text-slate-400">Una vez enviado el formulario por WhatsApp, Jorge De Angeli validará tus datos, registrará tu vacante y te proporcionará los datos de transferencia o link de pago con tarjeta para completar la matrícula.</p>
+                </div>
+
                 <div class="bg-slate-900 border border-slate-800 rounded-xl p-5">
                     <h4 class="font-bold text-white text-sm mb-2">¿Necesito saber programar para cursar la certificación?</h4>
                     <p class="text-xs text-slate-400">No, bajo ningún punto de vista. El programa está pensado para profesionales no programadores, enseñando a usar herramientas accesibles e interfaces no-code / low-code como Gemini, Google Workspace y Looker Studio.</p>
@@ -844,7 +1066,7 @@
             }
         }
 
-        // Handle Form Submission -> Route WhatsApp formatted query directly to Jorge De Angeli
+        // Handle Quick Lead Consultation Form Submission
         function handleFormSubmit(e) {
             e.preventDefault();
             
@@ -866,6 +1088,31 @@
             const waUrl = `https://wa.me/5493516573170?text=${encodedText}`;
 
             window.open(waUrl, '_blank');
+        }
+
+        // Handle Formal Inscription Form Submission to WhatsApp
+        function handleRegistrationSubmit(e) {
+            e.preventDefault();
+
+            const fullName = document.getElementById('regName').value.trim();
+            const documentNum = document.getElementById('regDocument').value.trim();
+            const phone = document.getElementById('regPhone').value.trim();
+            const email = document.getElementById('regEmail').value.trim();
+            const paymentOption = document.getElementById('regPaymentOption').value;
+
+            // Formatted message as requested
+            const messageText = `Quiero inscribirme en la Certificación Universitaria en IA para Recursos Humanos\n\n` +
+                                `📋 *DATOS DEL INSCRIPTO:*\n` +
+                                `• Nombre y Apellido: ${fullName}\n` +
+                                `• Nro. de Documento: ${documentNum}\n` +
+                                `• Teléfono: ${phone}\n` +
+                                `• Correo Electrónico: ${email}\n` +
+                                `• Opción de Pago elegida: ${paymentOption}`;
+
+            const encodedMessage = encodeURIComponent(messageText);
+            const waRegistrationUrl = `https://wa.me/5493516573170?text=${encodedMessage}`;
+
+            window.open(waRegistrationUrl, '_blank');
         }
     </script>
 </body>
